@@ -7,6 +7,7 @@ RUN npm install --global pm2
 COPY package.json  pnpm-lock.yaml ./
 RUN npm install -g pnpm
 RUN pnpm install --prod
+RUN pnpm install yarn
 COPY . .
 RUN pnpm build
 
